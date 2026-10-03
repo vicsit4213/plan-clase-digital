@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica Guiada en Parejas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #e5e5e5;
+      color: #333;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 1100px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .main-header {
+      background-color: #1a2536;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 20px;
+      border-radius: 6px;
+    }
+
+    .main-header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    /* NAVEGACIÓN */
+    .nav-bar {
+      background-color: #1a2536;
+      border-radius: 6px;
+      padding: 10px 20px;
+    }
+
+    .nav-bar ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-bar a {
+      color: #64b5f6;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTENEDOR PRINCIPAL FLEXBOX */
+    .modules-container {
+      display: flex;
+      flex-wrap: wrap; /* Permite adaptarse a pantallas pequeñas */
+      gap: 15px;
+      align-items: stretch;
+    }
+
+    /* ESTILO BASE DE TARJETAS / SECCIONES */
+    .card {
+      flex: 1 1 280px; /* Crece, se encoge y tiene una base de 280px */
+      border-radius: 6px;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* TARJETA 1 - LIGHT */
+    .card-light {
+      background-color: #e8f4fe;
+      border: 2px solid #64b5f6;
+      color: #1a2536;
+    }
+
+    .card-light h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #1a2536;
+    }
+
+    .card-light p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    /* TARJETA 2 - WHITE */
+    .card-white {
+      background-color: #ffffff;
+      border: 1px solid #dcdcdc;
+      color: #1a2536;
+    }
+
+    .card-white h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #1a2536;
+    }
+
+    .card-white p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* TARJETA 3 - DARK */
+    .card-dark {
+      background-color: #0f172a;
+      color: #ffffff;
+      border: 1px solid #1e293b;
+    }
+
+    .badge {
+      align-self: flex-start;
+      background-color: #0284c7;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 3px 8px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .card-dark h3 {
+      font-size: 1.2rem;
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .card-dark p {
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .btn-explore {
+      align-self: flex-start;
+      background-color: #0284c7;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: auto;
+      transition: background-color 0.2s;
+    }
+
+    .btn-explore:hover {
+      background-color: #0369a1;
+    }
+
+    /* PIE DE PÁGINA (ID único) */
+    #pie-principal {
+      background-color: #1a2536;
+      color: #ffffff;
+      text-align: center;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera principal -->
+  <header class="main-header">
+    <h1>Logotipo y Título Principal</h1>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#">🏠 Inicio</a></li>
+      <li><a href="#">📚 Módulos</a></li>
+      <li><a href="#">⚙️ Configuración</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenedor semántico principal -->
+  <main class="modules-container">
+    
+    <!-- Sección 1 -->
+    <section class="card card-light">
+      <h3>Módulo 1 (Destacado)</h3>
+      <p>Contenido especial del primer módulo.</p>
+    </section>
+
+    <!-- Sección 2 -->
+    <section class="card card-white">
+      <h3>Módulo 2</h3>
+      <p>Contenido estándar del módulo 2.</p>
+    </section>
+
+    <!-- Sección 3 -->
+    <section class="card card-dark">
+      <span class="badge">¡NUEVO!</span>
+      <h3>Módulo 3: Interactivo</h3>
+      <p>Aprende efectos avanzados de CSS, animaciones y diseño web moderno.</p>
+      <a href="#" class="btn-explore">Explorar contenido &rarr;</a>
+    </section>
+
+  </main>
+
+  <!-- Pie de página con selector de ID -->
+  <footer id="pie-principal">
+    Derechos Reservados &copy; 2026 &mdash; Práctica Guiada en Parejas
+  </footer>
+
+</body>
+</html>

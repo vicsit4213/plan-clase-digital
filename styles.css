@@ -1,0 +1,162 @@
+/* Reseteo básico y modelo de caja universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    line-height: 1.6;
+}
+
+/* Header principal */
+.header-principal {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header-principal h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.header-principal .subtitulo {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+/* Barra de navegación con Flexbox */
+.nav-plan {
+    background-color: #2b6cb0;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-plan ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-plan a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-plan a:hover {
+    background-color: #1c4ed8;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Estilo general de tarjetas (.tarjeta-info) */
+.tarjeta-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-info h2 {
+    color: #1a365d;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Grid de datos generales */
+.grid-datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.grid-datos p {
+    flex: 1 1 200px;
+    background-color: #f8fafc;
+    padding: 10px 15px;
+    border-left: 4px solid #2b6cb0;
+    border-radius: 4px;
+}
+
+/* Fases de la Secuencia Didáctica con Flexbox */
+.fases-contenedor {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.fase {
+    flex: 1 1 250px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+}
+
+.fase h3 {
+    margin-bottom: 8px;
+    color: #2b6cb0;
+}
+
+.fase.inicio { border-top: 4px solid #319795; }
+.fase.desarrollo { border-top: 4px solid #3182ce; }
+.fase.cierre { border-top: 4px solid #d69e2e; }
+
+/* Recursos y Evaluación con Flexbox */
+.recursos-evaluacion {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.columna {
+    flex: 1 1 300px;
+    background-color: #f8fafc;
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+
+.columna h3 {
+    color: #2b6cb0;
+    margin-bottom: 10px;
+}
+
+.columna ul {
+    list-style-position: inside;
+    color: #4a5568;
+}
+
+/* Pie de página */
+.footer-principal {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a365d;
+    color: #ffffff;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
