@@ -38,7 +38,6 @@
       font-weight: 600;
     }
 
-    /* NAVEGACIÓN */
     .nav-bar {
       background-color: #1a2536;
       border-radius: 6px;
@@ -66,17 +65,15 @@
       text-decoration: underline;
     }
 
-    /* CONTENEDOR PRINCIPAL FLEXBOX */
     .modules-container {
       display: flex;
-      flex-wrap: wrap; /* Permite adaptarse a pantallas pequeñas */
+      flex-wrap: wrap; 
       gap: 15px;
       align-items: stretch;
     }
 
-    /* ESTILO BASE DE TARJETAS / SECCIONES */
     .card {
-      flex: 1 1 280px; /* Crece, se encoge y tiene una base de 280px */
+      flex: 1 1 280px; 
       border-radius: 6px;
       padding: 25px 20px;
       display: flex;
@@ -89,7 +86,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* TARJETA 1 - LIGHT */
     .card-light {
       background-color: #e8f4fe;
       border: 2px solid #64b5f6;
@@ -107,7 +103,6 @@
       font-size: 0.9rem;
     }
 
-    /* TARJETA 2 - WHITE */
     .card-white {
       background-color: #ffffff;
       border: 1px solid #dcdcdc;
@@ -125,7 +120,6 @@
       font-size: 0.9rem;
     }
 
-    /* TARJETA 3 - DARK */
     .card-dark {
       background-color: #0f172a;
       color: #ffffff;
@@ -174,7 +168,6 @@
       background-color: #0369a1;
     }
 
-    /* PIE DE PÁGINA (ID único) */
     #pie-principal {
       background-color: #1a2536;
       color: #ffffff;
@@ -188,12 +181,10 @@
 </head>
 <body>
 
-  <!-- Cabecera principal -->
   <header class="main-header">
     <h1>Logotipo y Título Principal</h1>
   </header>
 
-  <!-- Menú de navegación -->
   <nav class="nav-bar">
     <ul>
       <li><a href="#">🏠 Inicio</a></li>
@@ -202,32 +193,25 @@
     </ul>
   </nav>
 
-  <!-- Contenedor semántico principal -->
   <main class="modules-container">
-    
-    <!-- Sección 1 -->
     <section class="card card-light">
       <h3>Módulo 1 (Destacado)</h3>
       <p>Contenido especial del primer módulo.</p>
     </section>
 
-    <!-- Sección 2 -->
     <section class="card card-white">
       <h3>Módulo 2</h3>
       <p>Contenido estándar del módulo 2.</p>
     </section>
 
-    <!-- Sección 3 -->
     <section class="card card-dark">
       <span class="badge">¡NUEVO!</span>
       <h3>Módulo 3: Interactivo</h3>
       <p>Aprende efectos avanzados de CSS, animaciones y diseño web moderno.</p>
       <a href="#" class="btn-explore">Explorar contenido &rarr;</a>
     </section>
-
   </main>
 
-  <!-- Pie de página con selector de ID -->
   <footer id="pie-principal">
     Derechos Reservados &copy; 2026 &mdash; Práctica Guiada en Parejas
   </footer>

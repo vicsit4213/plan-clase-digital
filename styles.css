@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header principal */
 .header-principal {
     background-color: #1a365d;
     color: #ffffff;
@@ -30,7 +29,6 @@ body {
     color: #cbd5e1;
 }
 
-/* Barra de navegación con Flexbox */
 .nav-plan {
     background-color: #2b6cb0;
     padding: 10px 0;
@@ -61,7 +59,6 @@ body {
     background-color: #1c4ed8;
 }
 
-/* Contenedor principal */
 .contenedor-principal {
     max-width: 1000px;
     margin: 30px auto;
@@ -71,7 +68,6 @@ body {
     gap: 25px;
 }
 
-/* Estilo general de tarjetas (.tarjeta-info) */
 .tarjeta-info {
     background-color: #ffffff;
     border-radius: 8px;
@@ -88,7 +84,6 @@ body {
     font-size: 1.4rem;
 }
 
-/* Grid de datos generales */
 .grid-datos {
     display: flex;
     flex-wrap: wrap;
@@ -103,7 +98,6 @@ body {
     border-radius: 4px;
 }
 
-/* Fases de la Secuencia Didáctica con Flexbox */
 .fases-contenedor {
     display: flex;
     gap: 15px;
@@ -127,7 +121,6 @@ body {
 .fase.desarrollo { border-top: 4px solid #3182ce; }
 .fase.cierre { border-top: 4px solid #d69e2e; }
 
-/* Recursos y Evaluación con Flexbox */
 .recursos-evaluacion {
     display: flex;
     gap: 20px;
@@ -151,7 +144,6 @@ body {
     color: #4a5568;
 }
 
-/* Pie de página */
 .footer-principal {
     text-align: center;
     padding: 20px;
