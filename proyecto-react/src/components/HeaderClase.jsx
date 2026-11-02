@@ -2,30 +2,26 @@ import { motion } from "framer-motion";
 
 export default function HeaderClase() {
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -40, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-      whileHover={{ scale: 1.02 }}
+    <motion.header 
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
       style={{
-        padding: "30px",
-        background: "linear-gradient(135deg, #0f4c81 0%, #1e3a8a 50%, #3b82f6 100%)",
+        background: "linear-gradient(135deg, #0f4c81 0%, #1e293b 100%)",
         color: "white",
+        padding: "24px 30px",
         borderRadius: "16px",
-        textAlign: "center",
-        boxShadow: "0 10px 30px rgba(15, 76, 129, 0.4)",
-        border: "1px solid rgba(255, 255, 255, 0.2)",
-        position: "relative",
-        overflow: "hidden"
+        marginBottom: "24px",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+        textAlign: "center"
       }}
     >
-      <motion.div
-        animate={{ rotate: [0, 5, -5, 0] }}
-        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-      >
-        <h1 style={{ margin: "0 0 8px 0", fontSize: "2rem", letterSpacing: "1px" }}>🚀 Plan de Clase Digital</h1>
-        <p style={{ margin: 0, opacity: 0.9, fontSize: "1.05rem", fontWeight: "300" }}>Innovación Interactiva y Tecnologías TIC</p>
-      </motion.div>
+      <h1 style={{ margin: 0, fontSize: "1.8rem", fontWeight: "bold" }}>
+        Programación de Aplicaciones Web: Semana 7
+      </h1>
+      <p style={{ margin: "8px 0 0 0", fontSize: "0.95rem", opacity: 0.9 }}>
+        👨‍🏫 <strong>Docente:</strong> Víctor Sitamul &nbsp;|&nbsp; ⏰ <strong>Horario:</strong> Sábados 7:00 - 9:20 AM
+      </p>
     </motion.header>
   );
 }

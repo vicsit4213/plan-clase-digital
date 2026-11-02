@@ -5,8 +5,8 @@ export default function ListaActividades() {
   const [registros, setRegistros] = useState([]);
   const [cargando, setCargando] = useState(true);
 
-  // Tus credenciales y endpoint de NocoDB Cloud
-  const ENDPOINT_NOCODB = 'https://app.nocodb.com/api/v3/data/pwwjrloq71mp5cm/mnksm5d2dnp1lc3/records?pageSize=25';
+  // Endpoint y Token de NocoDB
+  const ENDPOINT_NOCODB = 'https://app.nocodb.com/api/v3/data/pwwjrloq71mp5cm/mnksm5d2dnp1lc3/records?pageSize=25'
   const TOKEN_ACCESO = 'nc_pat_YLB5OIswuFdyiF8lCLmOEdfsVFSoSS99t61qRkAP';
 
   useEffect(() => {
@@ -30,15 +30,21 @@ export default function ListaActividades() {
   }, []);
 
   if (cargando) {
-    return <p style={{ textAlign: 'center', padding: '20px' }}>Cargando actividades desde la nube...</p>;
+    return (
+      <div style={{ textAlign: 'center', padding: '30px', color: '#0f4c81', fontWeight: 'bold' }}>
+        🔄 Cargando actividades dinámicas desde NocoDB Cloud...
+      </div>
+    );
   }
 
   return (
-    <div style={{ padding: '20px', maxWidth: '700px', margin: '0 auto' }}>
-      <h2 style={{ color: '#0f4c81', marginBottom: '16px' }}>📋 Plan de Clase: Actividades Dinámicas</h2>
+    <div>
+      <h3 style={{ color: '#0f4c81', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+        📋 Secuencia Didáctica (Persistencia NocoDB Cloud)
+      </h3>
       
       {registros.length === 0 ? (
-        <p>No se encontraron registros en la base de datos.</p>
+        <p style={{ color: '#64748b' }}>No se encontraron registros en la base de datos.</p>
       ) : (
         registros.map((item, index) => {
           const campos = item.fields || item;
@@ -49,7 +55,7 @@ export default function ListaActividades() {
             <ActividadItem 
               key={item.id || index}
               titulo={tituloActividad}
-              tiempo={duracionActividad}
+              tiempo={typeof duracionActividad === 'number' ? `${duracionActividad} min` : duracionActividad}
               index={index}
             />
           );

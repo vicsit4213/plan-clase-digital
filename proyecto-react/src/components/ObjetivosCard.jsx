@@ -1,32 +1,28 @@
 import { motion } from "framer-motion";
 
-export default function ObjetivosCard({ objetivo }) {
+export default function ObjetivosCard() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      whileHover={{ 
-        scale: 1.03, 
-        rotateX: 3, 
-        rotateY: -3, 
-        boxShadow: "0 15px 35px rgba(255, 253, 208, 0.25)" 
-      }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
       style={{
-        padding: "22px",
-        background: "linear-gradient(145deg, #FFFDD0 0%, #fef08a 100%)",
-        borderRadius: "14px",
-        margin: "20px 0",
-        boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
-        color: "#1e293b",
+        background: "#ffffff",
+        padding: "24px",
+        borderRadius: "16px",
+        marginBottom: "24px",
+        boxShadow: "0 4px 14px rgba(0,0,0,0.08)",
         borderLeft: "6px solid #0f4c81"
       }}
     >
-      <h3 style={{ margin: "0 0 8px 0", color: "#0f4c81", fontSize: "1.2rem", display: "flex", alignItems: "center", gap: "8px" }}>
-        🎯 Meta de Aprendizaje
+      <h3 style={{ color: '#0f4c81', marginTop: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+        🎯 Indicador de Logro & Competencia
       </h3>
-      <p style={{ margin: 0, fontSize: "1rem", lineHeight: "1.5", color: "#334155" }}>
-        {objetivo}
+      <p style={{ color: "#334155", margin: "8px 0", fontSize: "0.95rem" }}>
+        <strong>Indicador de Logro:</strong> Conecta aplicaciones web en React a bases de datos en la nube mediante API REST y llamadas asincrónicas con fetch.
+      </p>
+      <p style={{ color: "#64748b", margin: 0, fontSize: "0.9rem" }}>
+        <strong>Competencia:</strong> Evolucionar la arquitectura de software de almacenamiento volátil local a persistencia dinámica en bases de datos relacionales en la nube.
       </p>
     </motion.div>
   );
